@@ -8,7 +8,7 @@ class FocalLoss(nn.Module):
         self.alpha = alpha
         self.gamma = gamma
         self.ignore_index = ignore_index
-        self.size_average = size_average
+        self.size_average = size_average#徐一鸣
 
     def forward(self, inputs, targets):
         # F.cross_entropy(x,y)工作过程就是(Log_Softmax+NllLoss)：①对x做softmax,使其满足归一化要求，结果记为x_soft;②对x_soft做对数运算
